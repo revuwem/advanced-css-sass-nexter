@@ -1,4 +1,50 @@
 .footer {
-  background-color: $color-grey-dark-1;
+  background-color: $color-secondary;
   grid-column: full-start / full-end;
+
+  padding: 8rem;
+}
+
+.nav {
+  &__list {
+    list-style: none;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: stretch;
+    // gap: 4rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-size: 1.4rem;
+      color: $color-grey-light-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+
+      padding: 1.2rem 3rem;
+      display: block;
+
+      transition: all 0.2s;
+
+      &:hover,
+      &:active {
+        background-color: rgba($color: #fff, $alpha: 0.05);
+        transform: translateY(-1rem);
+      }
+    }
+  }
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: $color-grey-light-2;
+  margin: 6rem auto 0;
+  text-align: center;
 }
