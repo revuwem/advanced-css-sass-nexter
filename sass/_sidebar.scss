@@ -5,6 +5,13 @@
 
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: $bp-md) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 $nav-btn-width: 4.5rem;
@@ -35,5 +42,17 @@ $nav-btn-width: 4.5rem;
   &::after {
     height: 2.5px;
     transform: translateY(0.6rem);
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    margin-top: 0;
+    margin-right: 3rem;
+
+    &::before {
+      transform: translateY(-1rem);
+    }
+    &::after {
+      transform: translateY(0.8rem);
+    }
   }
 }
