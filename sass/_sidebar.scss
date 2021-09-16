@@ -2,4 +2,38 @@
   background-color: $color-primary;
   grid-column: sidebar-start / sidebar-end;
   grid-row: 1 / -1; // from start to end
+
+  display: flex;
+  justify-content: center;
+}
+
+$nav-btn-width: 4.5rem;
+
+.nav-btn {
+  border: none;
+  border-radius: none;
+
+  background-color: #fff;
+  height: 2.5px;
+  width: $nav-btn-width;
+
+  margin-top: 3rem;
+
+  &::before,
+  &::after {
+    background-color: #fff;
+    height: 2px;
+    width: $nav-btn-width;
+    content: "";
+    display: block;
+  }
+
+  &::before {
+    height: 3px;
+    transform: translateY(-0.8rem);
+  }
+  &::after {
+    height: 2.5px;
+    transform: translateY(0.6rem);
+  }
 }
